@@ -4,6 +4,7 @@ from . import views
 urlpatterns = [
     # Inicio
     path('', views.inicio, name='inicio'),
+    path('dashboard/', views.dashboard, name='dashboard'),
 
     # Categorías
     path('categorias/', views.lista_categorias, name='lista_categorias'),
@@ -22,4 +23,11 @@ urlpatterns = [
     path('clientes/crear/', views.crear_cliente, name='crear_cliente'),
     path('clientes/editar/<int:pk>/', views.editar_cliente, name='editar_cliente'),
     path('clientes/eliminar/<int:pk>/', views.eliminar_cliente, name='eliminar_cliente'),
+
+    # Compras / Pedidos
+    path('compras/', views.lista_compras, name='lista_compras'),
+    path('compras/nueva/', views.crear_compra, name='crear_compra'),
+    path('compras/<int:pk>/', views.detalle_compra, name='detalle_compra'),
+    path('compras/editar/<int:pk>/', views.editar_compra, name='editar_compra'),
+    path('compras/eliminar/<int:pk>/', views.eliminar_compra, name='eliminar_compra'),
 ]
