@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Inicio{% endblock %} · Papelería Punto y Coma</title>
+    <title>{% block title %}Inicio{% endblock %} · Papelería </title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     {% block extra_head %}{% endblock %}
 </head>
@@ -12,7 +12,7 @@
 
     <header class="site-header">
         <div class="header-inner">
-            <a href="{% url 'inicio' %}" class="brand" aria-label="Papelería Punto y Coma, ir al inicio">✏️ Papelería <span>Punto y Coma</span></a>
+            <a href="{% url 'inicio' %}" class="brand" aria-label="Papelería, ir al inicio">✏️ Papelería <span></span></a>
 
             <nav class="main-nav" aria-label="Navegación principal">
                 <a href="{% url 'inicio' %}" {% if request.path == '/' %}class="active" aria-current="page"{% endif %}>Inicio</a>
@@ -59,7 +59,7 @@
     </main>
 
     <footer class="site-footer">
-        Papelería Punto y Coma · Software que crece con tu negocio &copy; {% now "Y" %}
+        Papelería   · Software que crece con tu negocio &copy; {% now "Y" %}
     </footer>
     {% block extra_js %}{% endblock %}
 </body>
