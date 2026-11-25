@@ -1,32 +1,26 @@
-/* =========================================================================
-   Papelería Punto y Coma — Hoja de estilos propia (Práctica 8)
-   Paleta cálida: crema + blanco + carbón cálido + terracota
-   ========================================================================= */
-
-/* ---------- 1. Variables ---------- */
+/* Variables */
 :root {
-  /* Nombres que pide la Práctica 8 (apuntan a los de abajo) */
+
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-bg: var(--bg);
   --color-text: var(--text);
 
   /* Superficies */
-  --bg: #FAF7F2;            /* fondo crema/hueso */
-  --surface: #FFFFFF;       /* tarjetas */
-  --surface-alt: #F5EFE6;   /* encabezados de tabla, zonas suaves */
+  --bg: #FAF7F2;            
+  --surface: #FFFFFF;       
+  --surface-alt: #F5EFE6;   
   --border: #E7DED0;
 
   /* Texto */
-  --text: #1F2937;          /* carbón cálido (13.7:1 sobre crema) */
-  --text-muted: #6B5E55;    /* texto secundario (5.9:1 sobre crema) */
+  --text: #1F2937;          
+  --text-muted: #6B5E55;    
 
   /* Marca */
-  --primary: #C2410C;       /* terracota: botones y enlaces (5.2:1 con texto blanco) */
-  --primary-hover: #9A3412;
-  --accent: #F97316;        /* naranja melocotón: SOLO decorativo (bordes, foco, detalles) */
+  --primary: #C2410C;       
+  --accent: #F97316;        
   --accent-soft: #FFEDD5;
-  --secondary: #57534E;     /* pizarra cálida (7.6:1 con texto blanco) */
+  --secondary: #57534E;     
   --secondary-hover: #44403C;
   --ocre: #A16207;
 
@@ -35,7 +29,7 @@
   --header-text: #FAF7F2;
   --header-link: #FDBA74;
 
-  /* Estados (reservados para alertas y badges) */
+  /* Estados  */
   --success-bg: #DCFCE7; --success-text: #166534;
   --error-bg:   #FEE2E2; --error-text:   #991B1B; --danger: #B91C1C; --danger-hover: #991B1B;
   --warning-bg: #FEF3C7; --warning-text: #92400E;
@@ -92,7 +86,7 @@ a:hover { color: var(--primary-hover); }
 }
 .skip-link:focus { left: 0; }
 
-/* ---------- 3. Header y navegación ---------- */
+/*Header y navegación*/
 .site-header {
   background: var(--header-bg);
   color: var(--header-text);
@@ -123,7 +117,7 @@ a:hover { color: var(--primary-hover); }
 .user-box form { margin: 0; }
 .site-header :focus-visible { outline-color: var(--header-link); }
 
-/* ---------- 4. Contenedor, migas y encabezados de página ---------- */
+/*  Contenedor, migas y encabezados de página  */
 .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 1.25rem; flex: 1; }
 
 .breadcrumbs { font-size: var(--fs-small); margin-bottom: 1rem; }
@@ -139,7 +133,7 @@ a:hover { color: var(--primary-hover); }
 .page-header h1, .page-header h2 { margin: 0; }
 .actions { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; }
 
-/* ---------- 5. Tarjetas ---------- */
+/* Tarjetas */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -160,7 +154,7 @@ a:hover { color: var(--primary-hover); }
 }
 .hero p { color: var(--text-muted); max-width: 60ch; margin-bottom: 1rem; }
 
-/* ---------- 6. Botones ---------- */
+/* Botones */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: .35rem;
   padding: .6rem 1.05rem; min-height: 44px;
@@ -180,7 +174,7 @@ a:hover { color: var(--primary-hover); }
 .btn-header { background: transparent; color: var(--header-text); border-color: rgba(250,247,242,.45); min-height: 36px; padding: .25rem .8rem; }
 .btn-header:hover { background: rgba(250,247,242,.14); color: #fff; }
 
-/* ---------- 7. Tablas ---------- */
+/* Tablas  */
 .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: .5rem; }
 table { width: 100%; border-collapse: collapse; font-size: .95rem; }
 caption { text-align: left; font-size: var(--fs-small); color: var(--text-muted); padding-bottom: .5rem; }
@@ -190,7 +184,7 @@ tbody tr:hover { background: #FFFBF5; }
 td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .row-actions { display: flex; gap: .4rem; flex-wrap: wrap; }
 
-/* ---------- 8. Formularios ---------- */
+/*  Formularios */
 .form-group { margin-bottom: 1.1rem; }
 .form-group label { display: block; font-weight: 600; margin-bottom: .3rem; }
 .form-control {
@@ -219,7 +213,7 @@ textarea.form-control { min-height: 90px; resize: vertical; }
 .filters label { display: block; font-size: var(--fs-small); font-weight: 600; margin-bottom: .2rem; }
 .result-count { font-size: var(--fs-small); color: var(--text-muted); margin: .75rem 0 0; }
 
-/* ---------- 9. Alertas y badges ---------- */
+/* Alertas y badges */
 .messages { margin-bottom: 1rem; }
 .alert { padding: .8rem 1rem; border-radius: 8px; margin-bottom: .6rem; border: 1px solid transparent; font-weight: 500; }
 .alert-success { background: var(--success-bg); color: var(--success-text); border-color: #86EFAC; }
@@ -233,13 +227,13 @@ textarea.form-control { min-height: 90px; resize: vertical; }
 .badge-cancelado, .badge-out { background: var(--error-bg); color: var(--error-text); }
 .badge-neutral { background: var(--surface-alt); color: var(--secondary); }
 
-/* ---------- 10. Estados vacíos ---------- */
+/* Estados vacíos*/
 .empty-state { text-align: center; padding: 2.25rem 1rem; color: var(--text-muted); }
 .empty-state .empty-icon { font-size: 2.25rem; display: block; margin-bottom: .5rem; }
 .empty-state h3 { color: var(--text); }
 .empty-state .actions { justify-content: center; margin-top: 1rem; }
 
-/* ---------- 11. Dashboard, catálogo y detalle ---------- */
+/*  Dashboard, catálogo y detalle  */
 .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; margin-bottom: 1.25rem; }
 .stat { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.1rem; box-shadow: var(--shadow); border-left: 4px solid var(--accent); }
 .stat .label { font-size: var(--fs-small); color: var(--text-muted); margin: 0; }
@@ -261,10 +255,10 @@ textarea.form-control { min-height: 90px; resize: vertical; }
 .detail-list dd { margin: 0; }
 .total-row td { font-weight: 700; font-size: 1.05rem; background: var(--surface-alt); }
 
-/* ---------- 12. Pie ---------- */
+/* Pie */
 .site-footer { text-align: center; padding: 1.25rem; font-size: var(--fs-small); color: var(--text-muted); border-top: 1px solid var(--border); background: var(--surface); }
 
-/* ---------- 13. Responsivo ---------- */
+/*  Responsivo  */
 @media (max-width: 768px) {
   :root { --fs-h1: 1.5rem; --fs-h2: 1.25rem; }
   .header-inner { flex-direction: column; align-items: flex-start; }
